@@ -1,0 +1,43 @@
+<div class="container"
+    fxLayout="row"
+    fxLayout.sm="column"
+    fxLayout.xs="column"
+    fxLayoutAlign.gt-md="space-around center"
+    fxLayoutGap="10px" 
+    fxLayoutGap.xs="0">
+<!--------------------card pizza------------------------------------>
+
+<div fxFlex *ngFor="let dish of dishes.dishes"  > 
+    <mat-card class="card-pizza">
+    <mat-card-header>
+        <mat-card-title>
+        <h3>{{dish.name| uppercase}}</h3>
+        </mat-card-title>
+    </mat-card-header>
+ 
+    <img class="img-card-pizza" src="{{dish.image}}" alt="{{dish.image}}">
+   
+    <mat-card-content>
+        <p class="descricao-pizza">{{dish.description}} </p>
+    </mat-card-content> 
+    <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+</div>
+<!--------------------comentarios------------------------------------>
+
+<mat-card>
+<h3>Comments</h3>
+  <ul class="comentarios" *ngFor="let dish of dishes.dishes">
+    <ul *ngFor="let comment of dish.comments">
+      <li>
+        <p>{{comment.comment}}</p>
+        <p>{{comment.rating}} Stars</p>
+        <p>--{{comment.author}} {{data | date}}</p>
+      </li>
+    </ul>
+  </ul>
+</mat-card>
+

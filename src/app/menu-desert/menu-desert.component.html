@@ -1,0 +1,16 @@
+
+<div fxFlex>
+    <mat-card>
+        <mat-grid-list cols="2" rowHeight="200px">
+            <mat-grid-tile  *ngFor="let desert of deserts">
+              <img height="200px" src={{desert.image}} alt={{desert.name}}>
+              <mat-grid-tile-footer>
+                <h1>{{desert.name | uppercase}}</h1>
+              </mat-grid-tile-footer>
+            </mat-grid-tile>
+          </mat-grid-list>
+    </mat-card>
+    
+  </div>
+
+

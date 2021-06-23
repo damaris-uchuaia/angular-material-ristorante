@@ -1,0 +1,30 @@
+.img-card-pizza{
+    width: 400px;
+}
+.card-pizza{
+    height: 565px;
+}
+.descricao-pizza{
+    padding-top: 15px;
+}
+li{
+    list-style: none;
+}
+
+h3{
+    font-size: 26px;
+    margin: 5px;
+    text-align: left;
+}
+
+@media screen and (max-width:375px){
+    .img-card-pizza{
+        width: 70%;
+        margin-left: 30px;
+    }
+    .card-pizza{
+        height: auto;
+        margin-bottom: 10px;
+    }
+   
+}
